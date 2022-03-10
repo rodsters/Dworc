@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int health = 100;
-    public int dropRateOutOf100 = 10;
+    public int dropRateOutOf100 = 100;
     public GameObject theDrops;
     public GameObject enemy;
     public Transform dropPoint;
