@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class TowerManager : MonoBehaviour
     public int currHealth;
 
     public HealthSlider healthSlider;
+
+    public Text goldDisplay;
 
     public int gold = 0;
 
@@ -27,5 +30,6 @@ public class TowerManager : MonoBehaviour
             healthSlider.SetHealth(health);
             currHealth = health;
         }
+        goldDisplay.text = "Gold " + gold;
     }
 }
