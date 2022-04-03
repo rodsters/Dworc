@@ -15,8 +15,12 @@ public class TowerManager : MonoBehaviour
 
     public int gold = 0;
 
+    public SpriteRenderer spriteRenderer;
+
     void Start()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
         healthSlider.SetMaxHealth(MAX_HEALTH);
         health = MAX_HEALTH;
         currHealth = MAX_HEALTH;
@@ -31,5 +35,10 @@ public class TowerManager : MonoBehaviour
             currHealth = health;
         }
         goldDisplay.text = "Gold " + gold;
+    }
+    
+    public void changeSprite(Sprite newSprite)
+    {
+        spriteRenderer.sprite = newSprite;
     }
 }
