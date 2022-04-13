@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currUpgrade: 1
+  currUpgradeCool: 1
   tower: {fileID: 691993686}
   shoot: {fileID: 691993685}
   twoGun: {fileID: 21300000, guid: a68ac1193f4146941a5cfafc621a1be2, type: 3}
@@ -753,10 +754,10 @@ RectTransform:
   m_Father: {fileID: 524704104}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.92325383}
-  m_AnchorMax: {x: 0, y: 0.92325383}
-  m_AnchoredPosition: {x: 111.899994, y: -39}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0.6827314}
+  m_AnchorMax: {x: 0, y: 0.6827314}
+  m_AnchoredPosition: {x: 111.9, y: -17}
+  m_SizeDelta: {x: 160, y: 29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &170941811
 MonoBehaviour:
@@ -802,7 +803,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 47812441}
-        m_MethodName: UpgradeTurrets
+        m_MethodName: UpgradeCooldown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1399,7 +1400,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Upgrade Turret
+  m_Text: Upgrade Cooldown
 --- !u!222 &360463471
 CanvasRenderer:
   m_ObjectHideFlags: 0
