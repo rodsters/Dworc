@@ -18,7 +18,7 @@ public class shooting : MonoBehaviour
     public float bulletForce = 20f;
 
     public Image cooldownIcon;
-    public float cooldown1 = 5;
+    public float cooldown1 = 0.5f;
     bool isCooldown = false;
 
     private void Start()
@@ -34,7 +34,7 @@ public class shooting : MonoBehaviour
 
     void Shoot()
     {
-        if (Input.GetButtonDown("Fire1") && isCooldown == false)
+        if (Input.GetKeyDown("space") && isCooldown == false)
         {
             if(firePointUpgrades >= 4)
             {

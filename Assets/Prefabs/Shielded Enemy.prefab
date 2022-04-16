@@ -47,13 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
-  dropRateOutOf100: 10
+  dropRateOutOf100: 3
   theDrops: {fileID: 1259189243215561069, guid: 2380ac4f8525d6445a747a76eaff9cad,
     type: 3}
   enemy: {fileID: 8367526603025199382}
   dropPoint: {fileID: 3250058256137060097}
   wave: {fileID: 8076539321824727544, guid: f1948163638d8ba48a0dc523783117ac, type: 3}
-  enemyDifficulty: 2
+  enemyDifficulty: 1
 --- !u!61 &5700521775412235982
 BoxCollider2D:
   m_ObjectHideFlags: 0
