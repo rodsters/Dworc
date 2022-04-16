@@ -34,7 +34,7 @@ public class TowerManager : MonoBehaviour
             healthSlider.SetHealth(health);
             currHealth = health;
         }
-        goldDisplay.text = "Gold " + gold;
+        goldDisplay.text = "" + gold;
     }
     
     public void changeSprite(Sprite newSprite)

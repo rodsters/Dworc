@@ -122,17 +122,28 @@ public class WaveManager : MonoBehaviour
         spawning = true;
 
         waveNumber++;
-        waveDisplay.text = "Wave " + waveNumber;
-        difficulty = getDifficulty();
-
-        if (waveNumber % 2 == 0)    // 2 is a debugging value to make sure code works.
+        if (waveNumber < 10)
         {
-            bossSpawning = true;
+            waveDisplay.text = "0   0   " + waveNumber;
+        }
+        else if (waveNumber >= 10 && waveNumber < 100)
+        {
+            waveDisplay.text = "0   " + waveNumber/10 + "   " + waveNumber%10;
         }
         else
         {
-            bossSpawning = false;
+            waveDisplay.text = waveNumber / 100 + "   " + (waveNumber % 100) / 10 + "   " + waveNumber%10;
         }
+        difficulty = getDifficulty();
+
+        //if (waveNumber % 2 == 0)    // 2 is a debugging value to make sure code works.
+        //{
+        //    bossSpawning = true;
+        //}
+        //else
+        //{
+        //    bossSpawning = false;
+        //}
 
         waveSize = 0;
         initWaveSize = waveSize;
@@ -142,12 +153,8 @@ public class WaveManager : MonoBehaviour
     void SpawnEnemy()
     {
         int enemy = Random.Range(0, 2);
-        if (currDifficulty > difficulty - 2)
-        {
-            enemy = 0;
-        }
         currentEnemies[i] = Instantiate(enemyTypes[enemy], spawnPoint, Quaternion.identity) as GameObject;
-        currDifficulty += enemy + 1;
+        currDifficulty ++;
         i++;
         waveSize++;
     }

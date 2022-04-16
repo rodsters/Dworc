@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UpgradeTurret : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class UpgradeTurret : MonoBehaviour
 
     public Sprite twoGun;
     public Sprite fourGun;
+
+    public Image upgrade;
+    public Sprite TowerUpgrade;
 
     void Update()
     {
@@ -40,7 +44,7 @@ public class UpgradeTurret : MonoBehaviour
         if (tower.gold >= 1 && currUpgrade == 1)
         {
             currUpgrade *= 2;
-            tower.gold--;
+            //tower.gold--;
         }
         if (tower.gold >= 5 && currUpgrade == 2)
         {
@@ -53,6 +57,7 @@ public class UpgradeTurret : MonoBehaviour
         {
             tower.changeSprite(twoGun);
             shoot.firePointUpgrades = 2;
+            upgrade.sprite = TowerUpgrade;
         }
         /*
         if (currUpgrade == 3)
