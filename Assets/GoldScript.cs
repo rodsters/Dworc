@@ -12,6 +12,7 @@ public class GoldScript : MonoBehaviour
         {
             //add gold count
             GameObject.Find("speckyTower").GetComponent<TowerManager>().gold++;
+            FindObjectOfType<AudioManager>().Play("Coins");
             Destroy(gameObject);
         }
     }

@@ -36,6 +36,7 @@ public class shooting : MonoBehaviour
     {
         if (Input.GetKeyDown("space") && isCooldown == false)
         {
+            FindObjectOfType<AudioManager>().Play("Cannon");
             if(firePointUpgrades >= 4)
             {
                 isCooldown = true;
