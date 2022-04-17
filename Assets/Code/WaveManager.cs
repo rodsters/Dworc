@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class WaveManager : MonoBehaviour
 {
-    public const int MAX_WAZE_SIZE = 100;
+    public const int MAX_WAZE_SIZE = 1000;
 
     int i;
     public int waveSize;
     private int initWaveSize;
-    public float waveNumber;
+    public int waveNumber;
 
     public int difficulty;
     public int currDifficulty;
@@ -18,6 +18,8 @@ public class WaveManager : MonoBehaviour
     public Vector3 spawnPoint;
     public GameObject[] enemyTypes;
     public GameObject[] currentEnemies;
+
+    public bool increaseSpeed;
    
     float spawnCooldown;
     float waveCooldown;
@@ -124,17 +126,21 @@ public class WaveManager : MonoBehaviour
         waveNumber++;
         if (waveNumber < 10)
         {
-            waveDisplay.text = "0   0   " + waveNumber;
+            waveDisplay.text = "0  0  " + waveNumber;
         }
         else if (waveNumber >= 10 && waveNumber < 100)
         {
-            waveDisplay.text = "0   " + waveNumber/10 + "   " + waveNumber%10;
+            waveDisplay.text = "0  " + waveNumber/10 + "  " + waveNumber%10;
         }
         else
         {
-            waveDisplay.text = waveNumber / 100 + "   " + (waveNumber % 100) / 10 + "   " + waveNumber%10;
+            waveDisplay.text = waveNumber / 100 + "  " + (waveNumber % 100) / 10 + "  " + waveNumber%10;
         }
         difficulty = getDifficulty();
+        if (difficulty >= MAX_WAZE_SIZE)
+        {
+            difficulty = MAX_WAZE_SIZE - 1;
+        }
 
         //if (waveNumber % 2 == 0)    // 2 is a debugging value to make sure code works.
         //{

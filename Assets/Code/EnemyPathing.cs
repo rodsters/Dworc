@@ -9,6 +9,8 @@ public class EnemyPathing : MonoBehaviour
     public float rotationSpeed = 2f;
     private int index = 0;
     WaypointController waypointControl; // Code for waypointController from https://answers.unity.com/questions/696025/assigning-waypoints-to-an-instantiated-enemy.html
+    public WaveManager wave;
+
     // Start is called before the first frame update
     void Start()
     {

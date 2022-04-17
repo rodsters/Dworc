@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: 43d1623114b086d4999c9c298b98198b
+    path: Assets/Scenes/Rodney Shop.unity
+    guid: b89fe9edfb0e1d54eb84266ed4aae348
   m_configObjects: {}

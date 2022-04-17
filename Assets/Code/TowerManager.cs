@@ -16,6 +16,8 @@ public class TowerManager : MonoBehaviour
     public int gold = 0;
 
     public SpriteRenderer spriteRenderer;
+    public GameOver gameOver;
+    public WaveManager wave;
 
     void Start()
     {
@@ -33,6 +35,10 @@ public class TowerManager : MonoBehaviour
         {
             healthSlider.SetHealth(health);
             currHealth = health;
+        }
+        if (currHealth == 0)
+        {
+            gameOver.Setup(wave.waveNumber);
         }
         goldDisplay.text = "" + gold;
     }
